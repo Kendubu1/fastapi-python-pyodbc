@@ -3,11 +3,9 @@
 from fastapi import FastAPI, Body, Query, Header, Depends, Request
 from pydantic import BaseModel, Field
 import pyodbc
-from config import db
 
 # Connect to the database
-# Using the Linux FreeTDS Driver\ODBC
-connect_string = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=visfordsql.database.windows.net;DATABASE=visfordsql;UID=azureuser;PWD=Passw0rdlong!'
+connect_string = 'DRIVER={ODBC Driver 17 for SQL Server};SERVER=dbname.database.windows.net;DATABASE=;UID=;PWD='
 
 try: 
     conn = pyodbc.connect(connect_string)
